@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header>
+    <p>
+      <a href="/poems">Back</a>
+    </p>
+  </header>
+
+  <div>
+    <h1>{{ data.meta.title }}</h1>
+    {{ data.content }}
+    <br />
+    <time>{{ data.meta.date }}</time>
+    <p> {{ data.meta.comment }} </p>
+
+  </div>
+</body>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+  * {
+    background-color: #3b3737;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+  }
+</style>
+
+</html>

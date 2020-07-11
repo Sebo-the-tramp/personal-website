@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header>
+    <p>
+      <a href="/">Back</a>
+    </p>
+  </header>
+
+  <div>
+    <h1>Thoughts</h1>
+
+    <h4>My philosophy through some nice quotes and aforisms</h4>
+  </div>
+
+  <div id="divider">
+  </div>
+  <hr />
+  <div id="divider">
+  </div>
+
+  <div class="maxgazze">
+    {% for item in data %}
+
+    <div class="container">
+      <a href="{{item.meta.title_low}}">
+        <div class="thouhgtsdiv">
+          {{ item.meta.title }}
+        </div>
+      </a>
+    </div>
+
+    {% endfor %}
+
+  </div>
+
+
+</body>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+  * {
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  body {
+    background-color: #BCDCFF;
+  }
+
+  div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  ul {
+    padding: 0;
+    margin-top: 0;
+  }
+
+  hr {
+    width: 35%;
+  }
+
+  .maxgazze {
+    width: 70%;
+    margin: auto;
+  }
+
+  .container {
+    width: calc(100%/3);
+    float: left;
+    text-align: center;
+  }
+
+  .thouhgtsdiv {
+    line-height: 400px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 400px;
+    height: 400px;
+    background-color: #ffffff;
+    margin: 15px;
+    transition: scale 2s ease-in-out;
+    transition: background-color 1s ease-in-out;
+    transition: color 1s ease-in-out;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  a :hover {
+    transform: scale(1.03);
+    background-color: #006699;
+    color: white;
+  }
+
+  #divider {
+    padding: 10px;
+  }
+
+
+  @media only screen and (max-width: 1000px) {
+    .photo_quad {
+      width: 40%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .photo_quad {
+      width: 80%;
+    }
+  }
+</style>
+
+</html>

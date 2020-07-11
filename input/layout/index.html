@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Sebastian Cavada</title>
+  <meta name="home" content="home page">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <h1>Sebastian</h1>
+  <div class="welcome">
+    <img src="./images/seb.jpg" alt="Sebastian Cavada">
+  </div>
+  <h1>Cavada</h1>
+
+  <div id="divider">
+  </div>
+  <hr />
+  <div id="divider">
+  </div>
+
+  <div class="welcome">
+    <div class="description">
+      <p>
+        Statistics suggest that the landing page should be the most captivating <b>one</b> because otherwise
+        is nearly the only one you will visit. But this is a simple graphic I chose in order to <b>remember</b>
+        the great old internet days. Maybe this is not the type of page you would like, but I hope you are 
+        able to observe and discover the beauty not just with sight, but most importantly with <b>emotions.</b>
+      </p>
+    </div>
+  </div>
+
+  <div id="divider"></div>
+
+  <div style="height: 100px;">
+    <div id="right">
+      <li> {% for item in data %} <ul> <a href="./{{ item.meta.title }}">{{item.meta.description}}</a><br> </ul>
+        {% endfor %} </li>
+    </div>
+    <div id="left">
+      <li> {% for item in data %} <ul>{{item.meta.title}}</ul> {% endfor %} </li>
+    </div>
+  </div>
+
+  <div id="footer">
+    <footer>
+      
+      <p><small>©2020 Sebastian Cavada</small></p>
+    </footer>
+  </div>
+
+</body>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+  * {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  html,body {
+    min-height: 100%;
+    border:0;
+    margin: 0;
+  }
+
+  div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 0;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  table {
+    width: 20%;
+    padding: 0;
+    border: 0
+  }
+
+  a {
+    color: black;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  ul {
+    padding: 0;
+    margin-top: 0;
+  }
+
+  hr {
+    width: 35%;
+    color: #000000;
+  }
+
+  .welcome {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .description {
+    width: 80%;
+  }
+
+  #footer {
+    position:absolute;
+		bottom:0;
+		width:100%;
+		height:40px;
+    border:0;
+    margin:0;
+  }
+
+  #left {
+    text-align: right;
+    width: 47%;
+    float: right;
+    border-style: solid;
+    border-right-width: 2px;
+    border-color: black;
+    padding-right: 2%;
+  }
+
+  #right {
+    float: right;
+    text-align: left;
+    width: 48%;
+    padding-left: 2%;
+  }
+
+  #divider {
+    padding: 10px;
+  }
+
+  #center {
+    float: right;
+    margin-left: 0.9%;
+    margin-right: 0.9%;
+    width: 0.2%;
+    background-color: black;
+    height: 100px;
+  }
+
+  #content {
+    width: 20%
+  }
+</style>
+
+</html>

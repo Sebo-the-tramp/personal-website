@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ data.meta.title }}</title>
+  <meta name="description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <header>
+    <p>
+      <a href="/photography">Back</a>
+    </p>
+  </header>
+
+  <div>
+    <h1>{{data.meta.title}}</h1>
+
+    <h4>{{data.meta.description}}</h4>
+  </div>
+
+  <div id="divider">
+  </div>
+  <hr />
+  <div id="divider">
+  </div>
+
+  <div class="container">
+    {% for item in data.array %}
+
+    <img class="photo_quad" src="../../images/small/{{ item }}">
+
+    {% endfor %}
+  </div>
+</body>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+  * {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  body {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+  }
+
+  hr {
+    width: 35%;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+
+  img {
+    width: 24%;
+  }
+
+  h1 {
+    text-transform: uppercase;
+  }
+
+  .photo_quad {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+
+  #divider {
+    padding: 10px;
+  }
+
+  @media only screen and (max-width: 1330px) {
+    img {
+      width: 32%;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    img {
+      width: 45%;
+    }
+  }
+
+
+  @media only screen and (max-width: 500px) {
+    img {
+      width: 100%;
+    }
+  }
+</style>

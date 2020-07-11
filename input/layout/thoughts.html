@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <header>
+    <p>
+      <a href="/thoughts">Back</a>
+    </p>
+  </header>
+
+  <div>
+    <h1>{{ data.meta.title}}</h1>
+
+    <h4>{{ data.meta.date }}</h4>
+  </div>
+
+  <div id="divider">
+  </div>
+  <hr />
+  <div id="divider">
+  </div>
+
+  <div class="container">
+
+    <div class="content">
+      {{data.content}}
+    </div>
+
+  </div>
+
+</body>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+  * {
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  body {
+    background-color: #BCDCFF;
+  }
+
+  div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  ul {
+    padding: 0;
+    margin-top: 0;
+  }
+
+  hr {
+    width: 35%;
+  }
+
+  #divider {
+    padding: 10px;
+  }
+
+  #center {
+    float: right;
+    margin-left: 0.9%;
+    margin-right: 0.9%;
+    width: 0.2%;
+    background-color: black;
+    height: 100px;
+  }
+
+  .container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .content {
+    width: 60%;
+  }
+</style>
+
+</html>

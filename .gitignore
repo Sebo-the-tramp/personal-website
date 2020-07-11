@@ -1,4 +1,5 @@
 upload/*
-!output/*.jpg
-input/*.jpg
+input/**/*.JPG
+input/**/*.jpg
+output/**/*.html
 __pycache__/*

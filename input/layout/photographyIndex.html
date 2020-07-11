@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <p>
+            <a href="/">Back</a>
+        </p>
+    </header>
+
+    <div>
+        <h1>Photographies</h1>
+
+        <h4>All the shoots I took since I got my first camera in 2015</h4>
+    </div>
+
+    {% for item in data %}
+    <div id="divider">
+    </div>
+    <hr />
+    <div id="divider">
+    </div>
+    <div>
+        <h1><a href="/photography/{{item.meta.title}}">{{ item.meta.title }}</a></h1>
+
+        {% for photo in item.photo_strip %}
+        <a href="/photography/{{item.meta.title}}">
+            <img class="photo_quad" src="../images/small/{{ photo }}">
+        </a>
+        {% endfor %}
+
+        <h4>{{ item.meta.description }}</h4>
+    </div>
+    {% endfor %}
+
+
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+    * {
+        background-color: #000000;
+        color: #ffffff;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    div {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        text-align: center;
+    }
+
+    h1 {
+        text-transform: uppercase;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    ul {
+        padding: 0;
+        margin-top: 0;
+    }
+
+    hr {
+        width: 35%;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    img {
+        margin: 10px;
+        overflow: hidden;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+
+    img:hover {
+        -webkit-transform: scale(1.03);
+        transform: scale(1.03);
+    }
+
+    #divider {
+        padding: 10px;
+    }
+
+    #center {
+        float: right;
+        margin-left: 0.9%;
+        margin-right: 0.9%;
+        width: 0.2%;
+        background-color: black;
+        height: 100px;
+    }
+
+    #content {
+        width: 20%
+    }
+
+
+    .photo_quad {
+        width: 20%;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .photo_quad {
+            width: 40%;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .photo_quad {
+            width: 80%;
+        }
+    }
+</style>
+
+</html>
