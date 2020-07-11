@@ -1,0 +1,4 @@
+upload/*
+!output/*.jpg
+input/*.jpg
+__pycache__/*
